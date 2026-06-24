@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samrat Hardware & Plywood – Complete Home Interior & Hardware Solution, Bengaluru</title>
+  <meta name="description" content="Samrat Hardware & Plywood, Anjanapura, Bengaluru – Your trusted source for modular kitchen fittings, sliding wardrobe fittings, curtain brackets, plywood, laminates, and premium hardware accessories." />
+  <meta name="keywords" content="hardware shop Bengaluru, plywood Anjanapura, modular kitchen fittings, sliding wardrobe, curtain brackets, Hafele, Hettich, Ebco, laminates" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            wood: { DEFAULT: '#8B5E3C', light: '#A67C52', dark: '#6B4226' },
+            gold: { DEFAULT: '#C9A96E', light: '#DFC08A', dark: '#A8833A' },
+            cream: '#FAF7F2',
+            charcoal: { DEFAULT: '#1C1C1E', soft: '#2C2C2E', muted: '#48484A' }
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Inter', 'sans-serif']
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.7s ease forwards',
+            'fade-in': 'fadeIn 0.6s ease forwards',
+            'slide-left': 'slideLeft 0.7s ease forwards',
+            'float': 'float 3s ease-in-out infinite',
+            'shimmer': 'shimmer 2.5s infinite',
+            'marquee': 'marquee 30s linear infinite',
+          },
+          keyframes: {
+            fadeUp: { from: { opacity: 0, transform: 'translateY(30px)' }, to: { opacity: 1, transform: 'translateY(0)' } },
+            fadeIn: { from: { opacity: 0 }, to: { opacity: 1 } },
+            slideLeft: { from: { opacity: 0, transform: 'translateX(30px)' }, to: { opacity: 1, transform: 'translateX(0)' } },
+            float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-8px)' } },
+            shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+            marquee: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #FAF7F2; color: #1C1C1E; }
+    .dark body { background: #1C1C1E; color: #FAF7F2; }
+
+    /* Wood grain texture overlay */
+    .wood-texture {
+      background-image: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(139,94,60,0.04) 2px,
+        rgba(139,94,60,0.04) 4px
+      ), repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 60px,
+        rgba(139,94,60,0.02) 60px,
+        rgba(139,94,60,0.02) 62px
+      );
+    }
+
+    /* Glassmorphism */
+    .glass {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .glass-dark {
+      background: rgba(28,28,30,0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .dark .glass-card {
+      background: rgba(44,44,46,0.8);
+      border: 1px solid rgba(201,169,110,0.15);
+    }
+    .glass-card {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(139,94,60,0.1);
+    }
+
+    /* Shimmer button */
+    .btn-shimmer {
+      background: linear-gradient(90deg, #8B5E3C 0%, #C9A96E 40%, #8B5E3C 60%, #C9A96E 100%);
+      background-size: 200% auto;
+      transition: background-position 0.5s ease;
+    }
+    .btn-shimmer:hover { background-position: right center; }
+
+    /* Gold line accent */
+    .gold-line::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #C9A96E, #8B5E3C);
+      border-radius: 2px;
+      margin-top: 12px;
+    }
+    .gold-line-center::after { margin-left: auto; margin-right: auto; }
+
+    /* Product card hover */
+    .product-card { transition: transform 0.35s cubic-bezier(.22,.68,0,1.2), box-shadow 0.35s ease; }
+    .product-card:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(139,94,60,0.18); }
+
+    /* Hero gradient */
+    .hero-bg {
+      background: linear-gradient(135deg, #1C1C1E 0%, #2C1810 35%, #3D2314 60%, #1C1C1E 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        85deg,
+        transparent,
+        transparent 3px,
+        rgba(201,169,110,0.03) 3px,
+        rgba(201,169,110,0.03) 6px
+      );
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(139,94,60,0.25) 0%, transparent 70%);
+    }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left { opacity: 0; transform: translateX(-28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right { opacity: 0; transform: translateX(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+    /* Nav link hover */
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #C9A96E; transition: width 0.3s ease; border-radius: 1px; }
+    .nav-link:hover::after { width: 100%; }
+
+    /* Testimonial slider */
+    .testimonial-track { display: flex; transition: transform 0.5s cubic-bezier(.22,.68,0,1.2); }
+
+    /* Gallery hover */
+    .gallery-item { overflow: hidden; border-radius: 16px; }
+    .gallery-item img { transition: transform 0.5s ease; width: 100%; height: 100%; object-fit: cover; }
+    .gallery-item:hover img { transform: scale(1.07); }
+    .gallery-overlay { opacity: 0; transition: opacity 0.3s ease; }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+    /* Brand marquee */
+    .brand-track { display: flex; width: max-content; animation: marquee 32s linear infinite; }
+    .brand-track:hover { animation-play-state: paused; }
+
+    /* Dark mode transitions */
+    *, *::before, *::after { transition: background-color 0.3s ease, border-color 0.3s ease; }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #FAF7F2; }
+    ::-webkit-scrollbar-thumb { background: #C9A96E; border-radius: 3px; }
+    .dark ::-webkit-scrollbar-track { background: #1C1C1E; }
+
+    /* Back to top */
+    #back-to-top { transition: opacity 0.3s, transform 0.3s; }
+    #back-to-top.hidden-btn { opacity: 0; pointer-events: none; transform: translateY(12px); }
+
+    /* WhatsApp pulse */
+    .wa-pulse { animation: float 2.5s ease-in-out infinite; }
+
+    /* Section transitions */
+    section { transition: background 0.3s ease; }
+
+    /* Star rating */
+    .stars { color: #C9A96E; }
+
+    .dark .text-charcoal { color: #FAF7F2; }
+    .dark .bg-cream { background: #1C1C1E; }
+    .dark .bg-white { background: #2C2C2E; }
+    .dark .border-wood\/10 { border-color: rgba(139,94,60,0.25); }
+
+    /* Icon circle */
+    .icon-circle {
+      width: 64px; height: 64px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, rgba(201,169,110,0.15), rgba(139,94,60,0.15));
+      border: 1.5px solid rgba(201,169,110,0.3);
+      margin-bottom: 16px;
+    }
+
+    /* Progress bar for page load */
+    #progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #8B5E3C, #C9A96E); width: 0; z-index: 9999; transition: width 0.3s ease; }
+
+    @media (max-width: 768px) {
+      .brand-track { animation-duration: 18s; }
+    }
+  </style>
+</head>
+<body class="bg-cream dark:bg-charcoal font-body overflow-x-hidden">
+  <div id="progress"></div>
+
+  <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-wood to-gold flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-hammer text-white text-sm"></i>
+          </div>
+          <div>
+            <p class="font-display font-700 text-lg leading-tight text-white drop-shadow-sm">Samrat</p>
+            <p class="text-xs text-gold font-500 leading-tight tracking-wider">HARDWARE & PLYWOOD</p>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#about" class="nav-link text-white/85 hover:text-gold text-sm font-500 transition-colors">About</a>
+          <a href="#products" class="nav-link text-white/85 hover:text-gold text-sm font-500 transition-colors">Products</a>
+          <a href="#brands" class="nav-link text-white/85 hover:text-gold text-sm font-500 transition-colors">Brands</a>
+          <a href="#gallery" class="nav-link text-white/85 hover:text-gold text-sm font-500 transition-colors">Gallery</a>
+          <a href="#reviews" class="nav-link text-white/85 hover:text-gold text-sm font-500 transition-colors">Reviews</a>
+          <a href="#contact" class="nav-link text-white/85 hover:text-gold text-sm font-500 transition-colors">Contact</a>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-3">
+          <!-- Dark mode toggle -->
+          <button id="dark-toggle" aria-label="Toggle dark mode" class="w-9 h-9 rounded-full glass flex items-center justify-center text-white hover:text-gold transition-colors">
+            <i class="fa-solid fa-moon text-sm" id="dark-icon"></i>
+          </button>
+          <!-- Call button -->
+          <a href="tel:+917829346217" class="hidden sm:flex items-center gap-2 btn-shimmer text-white text-sm font-600 px-5 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-shadow">
+            <i class="fa-solid fa-phone text-xs"></i> Call Now
+          </a>
+          <!-- Mobile menu -->
+          <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 rounded-full glass flex items-center justify-center text-white">
+            <i class="fa-solid fa-bars text-sm"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden lg:hidden glass-dark border-t border-white/10">
+      <div class="px-4 py-4 flex flex-col gap-3">
+        <a href="#about" class="text-white/85 hover:text-gold text-sm font-500 py-2 mobile-link">About</a>
+        <a href="#products" class="text-white/85 hover:text-gold text-sm font-500 py-2 mobile-link">Products</a>
+        <a href="#brands" class="text-white/85 hover:text-gold text-sm font-500 py-2 mobile-link">Brands</a>
+        <a href="#gallery" class="text-white/85 hover:text-gold text-sm font-500 py-2 mobile-link">Gallery</a>
+        <a href="#reviews" class="text-white/85 hover:text-gold text-sm font-500 py-2 mobile-link">Reviews</a>
+        <a href="#contact" class="text-white/85 hover:text-gold text-sm font-500 py-2 mobile-link">Contact</a>
+        <a href="tel:+917829346217" class="btn-shimmer text-white text-sm font-600 px-5 py-3 rounded-xl text-center mt-1">
+          <i class="fa-solid fa-phone mr-2"></i> +91 7829 346 217
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <section class="hero-bg min-h-screen flex items-center relative" id="home">
+    <!-- Decorative circles -->
+    <div class="absolute top-20 right-0 w-96 h-96 bg-wood/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-gold/8 rounded-full blur-3xl"></div>
+    <!-- Wood grain overlay -->
+    <div class="absolute inset-0 wood-texture z-0"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-0">
+      <div class="grid lg:grid-cols-2 gap-12 items-center min-h-screen lg:py-28">
+
+        <!-- Left content -->
+        <div>
+          <div class="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-8 animate-fade-in">
+            <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+            <span class="text-gold text-xs font-600 tracking-widest uppercase">Anjanapura, Bengaluru</span>
+          </div>
+
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-800 text-white leading-[1.1] mb-6 animate-fade-up">
+            Complete Home<br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-wood-light">Interior &</span><br />
+            Hardware Solution
+          </h1>
+
+          <p class="text-white/65 text-sm sm:text-base leading-relaxed mb-10 max-w-lg animate-fade-up" style="animation-delay:0.15s">
+            Curtain Fittings &nbsp;·&nbsp; Modular Kitchen Fittings &nbsp;·&nbsp; Sliding Wardrobe Fittings<br />
+            Plywood &nbsp;·&nbsp; Laminates &nbsp;·&nbsp; Hardware Accessories
+          </p>
+
+          <div class="flex flex-wrap gap-4 animate-fade-up" style="animation-delay:0.25s">
+            <a href="#products" class="btn-shimmer text-white font-600 px-8 py-4 rounded-full shadow-2xl hover:shadow-gold/30 transition-all duration-300 text-sm sm:text-base">
+              Explore Products <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+            <a href="#contact" class="glass text-white font-600 px-8 py-4 rounded-full hover:bg-white/20 transition-all duration-300 text-sm sm:text-base border border-white/30">
+              Contact Us
+            </a>
+          </div>
+
+          <!-- Quick stats -->
+          <div class="grid grid-cols-3 gap-6 mt-14 animate-fade-up" style="animation-delay:0.35s">
+            <div>
+              <p class="font-display text-3xl font-700 text-gold">500+</p>
+              <p class="text-white/55 text-xs mt-1">Products</p>
+            </div>
+            <div class="border-l border-white/15 pl-6">
+              <p class="font-display text-3xl font-700 text-gold">11+</p>
+              <p class="text-white/55 text-xs mt-1">Premium Brands</p>
+            </div>
+            <div class="border-l border-white/15 pl-6">
+              <p class="font-display text-3xl font-700 text-gold">1000+</p>
+              <p class="text-white/55 text-xs mt-1">Happy Customers</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: feature cards -->
+        <div class="hidden lg:grid grid-cols-2 gap-4 relative">
+          <div class="absolute -inset-4 bg-gradient-to-br from-wood/15 via-transparent to-gold/10 rounded-3xl blur-xl"></div>
+          <div class="glass rounded-2xl p-6 animate-float" style="animation-delay:0s">
+            <i class="fa-solid fa-kitchen-set text-gold text-2xl mb-3"></i>
+            <h3 class="text-white font-600 text-sm">Modular Kitchen</h3>
+            <p class="text-white/55 text-xs mt-1">Premium fittings & accessories</p>
+          </div>
+          <div class="glass rounded-2xl p-6 animate-float mt-6" style="animation-delay:0.4s">
+            <i class="fa-solid fa-door-closed text-gold text-2xl mb-3"></i>
+            <h3 class="text-white font-600 text-sm">Sliding Wardrobes</h3>
+            <p class="text-white/55 text-xs mt-1">Elegant sliding systems</p>
+          </div>
+          <div class="glass rounded-2xl p-6 animate-float" style="animation-delay:0.8s">
+            <i class="fa-solid fa-layer-group text-gold text-2xl mb-3"></i>
+            <h3 class="text-white font-600 text-sm">Plywood & Laminates</h3>
+            <p class="text-white/55 text-xs mt-1">Top grade, curated selection</p>
+          </div>
+          <div class="glass rounded-2xl p-6 animate-float mt-6" style="animation-delay:1.2s">
+            <i class="fa-solid fa-screwdriver-wrench text-gold text-2xl mb-3"></i>
+            <h3 class="text-white font-600 text-sm">Hardware Accessories</h3>
+            <p class="text-white/55 text-xs mt-1">Handles, hinges, locks & more</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-float">
+      <span class="text-white/40 text-xs tracking-widest">SCROLL</span>
+      <div class="w-px h-10 bg-gradient-to-b from-white/30 to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+  <section id="about" class="py-24 bg-white dark:bg-charcoal-soft relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-72 h-72 bg-gold/5 rounded-full blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Left -->
+        <div class="reveal-left">
+          <p class="text-wood font-600 text-xs tracking-widest uppercase mb-3">Our Story</p>
+          <h2 class="font-display text-4xl lg:text-5xl font-700 text-charcoal dark:text-cream leading-tight mb-2 gold-line">
+            Bengaluru's Trusted<br />Hardware Showroom
+          </h2>
+          <p class="text-charcoal-muted dark:text-cream/60 leading-relaxed mt-6 mb-6">
+            Samrat Hardware & Plywood has been the go-to destination for homeowners, interior designers, and contractors across Bengaluru. Located in the heart of Anjanapura, our showroom brings together a curated collection of premium hardware, plywood, and interior fitting solutions under one roof.
+          </p>
+          <p class="text-charcoal-muted dark:text-cream/60 leading-relaxed mb-8">
+            We carry only genuine products from trusted brands — Hafele, Hettich, Ebco, Greenply, CenturyPly, and more — ensuring every purchase reflects lasting quality. Our expert team offers personalised guidance to help you choose the right products for every space in your home.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-wood/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-check text-wood text-xs"></i>
+              </div>
+              <div>
+                <p class="font-600 text-sm text-charcoal dark:text-cream">Genuine Brands</p>
+                <p class="text-xs text-charcoal-muted dark:text-cream/55 mt-0.5">100% authentic products</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-wood/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-tag text-wood text-xs"></i>
+              </div>
+              <div>
+                <p class="font-600 text-sm text-charcoal dark:text-cream">Best Prices</p>
+                <p class="text-xs text-charcoal-muted dark:text-cream/55 mt-0.5">Competitive market rates</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-wood/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-user-tie text-wood text-xs"></i>
+              </div>
+              <div>
+                <p class="font-600 text-sm text-charcoal dark:text-cream">Expert Guidance</p>
+                <p class="text-xs text-charcoal-muted dark:text-cream/55 mt-0.5">Knowledgeable staff</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-wood/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-heart text-wood text-xs"></i>
+              </div>
+              <div>
+                <p class="font-600 text-sm text-charcoal dark:text-cream">Customer First</p>
+                <p class="text-xs text-charcoal-muted dark:text-cream/55 mt-0.5">Your satisfaction guaranteed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Visual card -->
+        <div class="reveal-right">
+          <div class="relative">
+            <div class="aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-charcoal via-wood-dark to-charcoal-soft shadow-2xl">
+              <!-- Abstract showroom illustration -->
+              <svg viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                <!-- Background -->
+                <rect width="600" height="450" fill="url(#bgGrad)"/>
+                <defs>
+                  <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#1C1C1E"/>
+                    <stop offset="100%" style="stop-color:#2C1810"/>
+                  </linearGradient>
+                  <linearGradient id="woodGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#6B4226"/>
+                    <stop offset="50%" style="stop-color:#8B5E3C"/>
+                    <stop offset="100%" style="stop-color:#A67C52"/>
+                  </linearGradient>
+                  <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#C9A96E"/>
+                    <stop offset="100%" style="stop-color:#DFC08A"/>
+                  </linearGradient>
+                </defs>
+                <!-- Floor -->
+                <rect x="0" y="320" width="600" height="130" fill="url(#woodGrad)" opacity="0.4"/>
+                <line x1="0" y1="340" x2="600" y2="340" stroke="#C9A96E" stroke-width="0.5" opacity="0.3"/>
+                <!-- Cabinet base -->
+                <rect x="60" y="200" width="200" height="130" rx="4" fill="#2C1810" stroke="#8B5E3C" stroke-width="1"/>
+                <rect x="70" y="210" width="85" height="55" rx="3" fill="#3D2314" stroke="#C9A96E" stroke-width="0.5"/>
+                <rect x="165" y="210" width="85" height="55" rx="3" fill="#3D2314" stroke="#C9A96E" stroke-width="0.5"/>
+                <rect x="70" y="273" width="85" height="45" rx="3" fill="#3D2314" stroke="#C9A96E" stroke-width="0.5"/>
+                <rect x="165" y="273" width="85" height="45" rx="3" fill="#3D2314" stroke="#C9A96E" stroke-width="0.5"/>
+                <!-- Handles -->
+                <rect x="108" y="235" width="12" height="3" rx="1.5" fill="#C9A96E"/>
+                <rect x="203" y="235" width="12" height="3" rx="1.5" fill="#C9A96E"/>
+                <rect x="108" y="292" width="12" height="3" rx="1.5" fill="#C9A96E"/>
+                <rect x="203" y="292" width="12" height="3" rx="1.5" fill="#C9A96E"/>
+                <!-- Upper cabinets -->
+                <rect x="60" y="80" width="200" height="110" rx="4" fill="#2C1810" stroke="#8B5E3C" stroke-width="1"/>
+                <rect x="70" y="90" width="85" height="90" rx="3" fill="#3D2314" stroke="#C9A96E" stroke-width="0.5"/>
+                <rect x="165" y="90" width="85" height="90" rx="3" fill="#3D2314" stroke="#C9A96E" stroke-width="0.5"/>
+                <rect x="108" y="132" width="12" height="3" rx="1.5" fill="#C9A96E"/>
+                <rect x="203" y="132" width="12" height="3" rx="1.5" fill="#C9A96E"/>
+                <!-- Wardrobe right -->
+                <rect x="340" y="60" width="210" height="280" rx="6" fill="#2C1810" stroke="#8B5E3C" stroke-width="1.5"/>
+                <line x1="445" y1="60" x2="445" y2="340" stroke="#C9A96E" stroke-width="0.8"/>
+                <!-- Wardrobe panels -->
+                <rect x="350" y="70" width="88" height="260" rx="3" fill="url(#woodGrad)" opacity="0.4"/>
+                <rect x="447" y="70" width="94" height="260" rx="3" fill="url(#woodGrad)" opacity="0.25"/>
+                <!-- Wardrobe handles -->
+                <rect x="430" y="188" width="4" height="30" rx="2" fill="url(#goldGrad)"/>
+                <rect x="453" y="188" width="4" height="30" rx="2" fill="url(#goldGrad)"/>
+                <!-- Countertop -->
+                <rect x="55" y="193" width="210" height="12" rx="3" fill="#C9A96E" opacity="0.7"/>
+                <!-- Decorative light strip -->
+                <rect x="60" y="75" width="200" height="4" rx="2" fill="#C9A96E" opacity="0.5"/>
+                <!-- Brand badge -->
+                <rect x="160" y="160" width="120" height="32" rx="16" fill="rgba(201,169,110,0.15)" stroke="#C9A96E" stroke-width="0.8"/>
+                <text x="220" y="181" text-anchor="middle" font-family="Inter" font-size="11" fill="#C9A96E" font-weight="600">SAMRAT</text>
+                <!-- Sparkles -->
+                <circle cx="500" cy="40" r="2" fill="#C9A96E" opacity="0.8"/>
+                <circle cx="30" cy="100" r="1.5" fill="#C9A96E" opacity="0.6"/>
+                <circle cx="320" cy="370" r="1.5" fill="#C9A96E" opacity="0.5"/>
+              </svg>
+            </div>
+
+            <!-- Overlay badge -->
+            <div class="absolute -bottom-5 -right-5 glass-card rounded-2xl p-5 shadow-2xl border border-wood/15">
+              <p class="font-display text-2xl font-700 text-wood">10+</p>
+              <p class="text-xs text-charcoal-muted dark:text-cream/60 font-500">Years of Trust</p>
+            </div>
+            <div class="absolute -top-5 -left-5 glass-card rounded-xl p-4 shadow-xl border border-wood/15">
+              <div class="flex items-center gap-2">
+                <div class="stars text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <span class="text-xs font-600 text-charcoal dark:text-cream">4.9/5</span>
+              </div>
+              <p class="text-xs text-charcoal-muted dark:text-cream/60 mt-0.5">Customer Rating</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ PRODUCTS ═══════════════════════════════ -->
+  <section id="products" class="py-24 bg-cream dark:bg-charcoal relative overflow-hidden">
+    <div class="absolute inset-0 wood-texture opacity-40"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <p class="text-wood font-600 text-xs tracking-widest uppercase mb-3">What We Offer</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-700 text-charcoal dark:text-cream gold-line gold-line-center">
+          Product Categories
+        </h2>
+        <p class="text-charcoal-muted dark:text-cream/60 mt-6 max-w-xl mx-auto text-sm leading-relaxed">
+          From modular kitchen systems to premium plywood — everything you need for a beautiful, functional home.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+
+        <!-- Product cards -->
+        <div class="product-card glass-card dark:bg-charcoal-soft rounded-2xl p-6 text-center cursor-pointer reveal border border-wood/10">
+          <div class="icon-circle mx-auto">
+            <i class="fa-solid fa-kitchen-set text-wood text-xl"></i>
+          </div>
+          <h3 class="font-display font-600 text-charcoal dark:text-cream text-sm leading-tight">Modular Kitchen Accessories</h3>
+          <p class="text-charcoal-muted dark:text-cream/55 text-xs mt-2">Lift systems, organisers, basket units</p>
+        </div>
+
+        <div class="product-card glass-card dark:bg-charcoal-soft rounded-2xl p-6 text-center cursor-pointer reveal border border-wood/10" style="transition-delay:0.05s">
+          <div class="icon-circle mx-auto">
+            <i class="fa-solid fa-door-open text-wood text-xl"></i>
+          </div>
+          <h3 class="font-display font-600 text-charcoal dark:text-cream text-sm leading-tight">Sliding Wardrobe Fittings</h3>
+          <p class="text-charcoal-muted dark:text-cream/55 text-xs mt-2">Tracks, rollers, soft-close systems</p>
+        </div>
+
+        <div class="product-card glass-card dark:bg-charcoal-soft rounded-2xl p-6 text-center cursor-pointer reveal border border-wood/10" style="transition-delay:0.1s">
+          <div class="icon-circle mx-auto">
+            <i class="fa-solid fa-window-maximize text-wood text-xl"></i>
+          </div>
+          <h3 class="font-display font-600 text-charcoal dark:text-cream text-sm leading-tight">Curtain Brackets & Accessories</h3>
+          <p class="text-charcoal-muted dark:text-cream/55 text-xs mt-2">Rods, finials, rings, brackets</p>
+        </div>
+
+        <div class="product-card glass-card dark:bg-charcoal-soft rounded-2xl p-6 text-center cursor-pointer reveal border border-wood/10" style="transition-delay:0.15s">
+          <div class="icon-circle mx-auto">
+            <i class="fa-solid fa-layer-group text-wood text-xl"></i>
+          </div>
+          <h3 class="font-display font-600 text-charcoal dark:text-cream text-sm leading-tight">Plywood</h3>
+          <p class="text-charcoal-muted dark:text-cream/55 text-xs mt-2">BWR, BWP, commercial grades</p>
+        </div>
+
+        <div class="product-card glass-card dark:bg-charcoal-soft rounded-2xl p-6 text-center cursor-pointer reveal border border-wood/10" style="transition-delay:0.2s">
+          <div class="icon-circle mx-auto">
+            <i class="fa-solid fa-palette text-wood text-xl"></i>
+          </div>
+          <h3 class="font-display font-600 text-charcoal dark:text-cream text-sm leading-tight">Laminates</h3>
+          <p class="text-charcoal-muted dark:text-cream/55 text-xs mt-2">Matte, gloss, textured finishes</p>
+        </div>
+
+        <div class="product-card glass-card dark:bg-charcoal-soft rounded-2xl p-6 text-center cursor-pointer reveal border border-wood/10" style="transition-delay:0.25s">
+          <div class="icon-circle mx-auto">
+            <i class="fa-solid fa-circle-dot text-wood text-xl"></i>
+          </div>
+          <h3 class="font-display font-600 text-charcoal dark:text-cream text-sm leading-tight">Handles & Knobs</h3>
+          <p class="text-charcoal-muted dark:text-cream/55 text-xs mt-2">SS, zinc, aluminium designs</p>
+        </div>
+
+        <div class="product-card glass-card dark:bg-charcoal-soft rounded-2xl p-6 text-center cursor-pointer reveal border border-wood/10" style="transition-delay:0.3s">
+          <div class="icon-circle mx-auto">
+            <i class="fa-solid fa-gear text-wood text-xl"></i>
+          </div>
+          <h3 class="font-display font-600 text-charcoal dark:text-cream text-sm leading-tight">Hinges</h3>
+          <p class="text-charcoal-muted dark:text-cream/55 text-xs mt-2">Concealed, overlay, soft-close</p>
+        </div>
+
+        <div class="product-card glass-card dark:bg-charcoal-soft rounded-2xl p-6 text-center cursor-pointer reveal border border-wood/10" style="transition-delay:0.35s">
+          <div class="icon-circle mx-auto">
+            <i class="fa-solid fa-ruler-horizontal text-wood text-xl"></i>
+          </div>
+          <h3 class="font-display font-600 text-charcoal dark:text-cream text-sm leading-tight">Telescopic Channels</h3>
+          <p class="text-charcoal-muted dark:text-cream/55 text-xs mt-2">Full & partial extension slides</p>
+        </div>
+
+        <div class="product-card glass-card dark:bg-charcoal-soft rounded-2xl p-6 text-center cursor-pointer reveal border border-wood/10" style="transition-delay:0.4s">
+          <div class="icon-circle mx-auto">
+            <i class="fa-solid fa-box-open text-wood text-xl"></i>
+          </div>
+          <h3 class="font-display font-600 text-charcoal dark:text-cream text-sm leading-tight">Drawer Systems</h3>
+          <p class="text-charcoal-muted dark:text-cream/55 text-xs mt-2">Tandem, inner pull, legrabox</p>
+        </div>
+
+        <div class="product-card glass-card dark:bg-charcoal-soft rounded-2xl p-6 text-center cursor-pointer reveal border border-wood/10" style="transition-delay:0.45s">
+          <div class="icon-circle mx-auto">
+            <i class="fa-solid fa-lock text-wood text-xl"></i>
+          </div>
+          <h3 class="font-display font-600 text-charcoal dark:text-cream text-sm leading-tight">Locks</h3>
+          <p class="text-charcoal-muted dark:text-cream/55 text-xs mt-2">Cabinet, drawer, mortice locks</p>
+        </div>
+
+        <div class="product-card glass-card dark:bg-charcoal-soft rounded-2xl p-6 text-center cursor-pointer reveal border border-wood/10" style="transition-delay:0.5s">
+          <div class="icon-circle mx-auto">
+            <i class="fa-solid fa-droplet text-wood text-xl"></i>
+          </div>
+          <h3 class="font-display font-600 text-charcoal dark:text-cream text-sm leading-tight">Adhesives</h3>
+          <p class="text-charcoal-muted dark:text-cream/55 text-xs mt-2">Contact, wood, synthetic adhesives</p>
+        </div>
+
+        <div class="product-card glass-card dark:bg-charcoal-soft rounded-2xl p-6 text-center cursor-pointer reveal border border-wood/10" style="transition-delay:0.55s">
+          <div class="icon-circle mx-auto">
+            <i class="fa-solid fa-shower text-wood text-xl"></i>
+          </div>
+          <h3 class="font-display font-600 text-charcoal dark:text-cream text-sm leading-tight">Bathroom Accessories</h3>
+          <p class="text-charcoal-muted dark:text-cream/55 text-xs mt-2">Towel bars, hooks, holders</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ WHY CHOOSE US ═══════════════════════════════ -->
+  <section id="why" class="py-24 bg-gradient-to-br from-charcoal via-charcoal-soft to-wood-dark relative overflow-hidden">
+    <div class="absolute inset-0 wood-texture opacity-30"></div>
+    <!-- Gold shimmer line top -->
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <p class="text-gold font-600 text-xs tracking-widest uppercase mb-3">Our Promise</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-700 text-white gold-line gold-line-center">
+          Why Choose Samrat?
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="glass rounded-2xl p-8 reveal hover:bg-white/20 transition-all duration-300 group">
+          <div class="w-14 h-14 rounded-2xl bg-gold/15 flex items-center justify-center mb-6 group-hover:bg-gold/25 transition-colors">
+            <i class="fa-solid fa-medal text-gold text-xl"></i>
+          </div>
+          <h3 class="font-display text-lg font-600 text-white mb-2">Premium Quality Products</h3>
+          <p class="text-white/55 text-sm leading-relaxed">Every product on our shelves passes strict quality checks. We partner only with certified, industry-leading brands.</p>
+        </div>
+
+        <div class="glass rounded-2xl p-8 reveal hover:bg-white/20 transition-all duration-300 group" style="transition-delay:0.08s">
+          <div class="w-14 h-14 rounded-2xl bg-gold/15 flex items-center justify-center mb-6 group-hover:bg-gold/25 transition-colors">
+            <i class="fa-solid fa-tags text-gold text-xl"></i>
+          </div>
+          <h3 class="font-display text-lg font-600 text-white mb-2">Best Prices</h3>
+          <p class="text-white/55 text-sm leading-relaxed">Get genuine branded products at honest, competitive prices. We believe quality should be accessible to everyone.</p>
+        </div>
+
+        <div class="glass rounded-2xl p-8 reveal hover:bg-white/20 transition-all duration-300 group" style="transition-delay:0.16s">
+          <div class="w-14 h-14 rounded-2xl bg-gold/15 flex items-center justify-center mb-6 group-hover:bg-gold/25 transition-colors">
+            <i class="fa-solid fa-grip text-gold text-xl"></i>
+          </div>
+          <h3 class="font-display text-lg font-600 text-white mb-2">Wide Product Range</h3>
+          <p class="text-white/55 text-sm leading-relaxed">500+ products across 12+ categories — from the smallest hinge to full modular kitchen systems, we have it all.</p>
+        </div>
+
+        <div class="glass rounded-2xl p-8 reveal hover:bg-white/20 transition-all duration-300 group" style="transition-delay:0.24s">
+          <div class="w-14 h-14 rounded-2xl bg-gold/15 flex items-center justify-center mb-6 group-hover:bg-gold/25 transition-colors">
+            <i class="fa-solid fa-certificate text-gold text-xl"></i>
+          </div>
+          <h3 class="font-display text-lg font-600 text-white mb-2">Trusted Brands</h3>
+          <p class="text-white/55 text-sm leading-relaxed">Authorised dealer for Hafele, Hettich, Ebco, Greenply, CenturyPly, Merino, and more premium names.</p>
+        </div>
+
+        <div class="glass rounded-2xl p-8 reveal hover:bg-white/20 transition-all duration-300 group" style="transition-delay:0.32s">
+          <div class="w-14 h-14 rounded-2xl bg-gold/15 flex items-center justify-center mb-6 group-hover:bg-gold/25 transition-colors">
+            <i class="fa-solid fa-headset text-gold text-xl"></i>
+          </div>
+          <h3 class="font-display text-lg font-600 text-white mb-2">Expert Support</h3>
+          <p class="text-white/55 text-sm leading-relaxed">Our experienced team helps you pick the right product for every project — no guesswork, no overselling.</p>
+        </div>
+
+        <div class="glass rounded-2xl p-8 reveal hover:bg-white/20 transition-all duration-300 group" style="transition-delay:0.4s">
+          <div class="w-14 h-14 rounded-2xl bg-gold/15 flex items-center justify-center mb-6 group-hover:bg-gold/25 transition-colors">
+            <i class="fa-solid fa-bolt text-gold text-xl"></i>
+          </div>
+          <h3 class="font-display text-lg font-600 text-white mb-2">Fast Customer Service</h3>
+          <p class="text-white/55 text-sm leading-relaxed">Quick response, easy billing, and hassle-free service. We value your time as much as you do.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Gold shimmer line bottom -->
+    <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+  </section>
+
+  <!-- ═══════════════════════════════ BRANDS ═══════════════════════════════ -->
+  <section id="brands" class="py-24 bg-white dark:bg-charcoal-soft overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 reveal">
+        <p class="text-wood font-600 text-xs tracking-widest uppercase mb-3">We Stock</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-700 text-charcoal dark:text-cream gold-line gold-line-center">
+          Featured Brands
+        </h2>
+        <p class="text-charcoal-muted dark:text-cream/60 mt-6 text-sm">Authorised dealer for India's most trusted interior hardware brands</p>
+      </div>
+    </div>
+
+    <!-- Infinite marquee -->
+    <div class="relative overflow-hidden py-6">
+      <div class="absolute left-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-r from-white dark:from-charcoal-soft to-transparent"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-l from-white dark:from-charcoal-soft to-transparent"></div>
+
+      <div class="brand-track">
+        <!-- First set -->
+        <div class="flex items-center gap-10 px-5">
+          <div class="brand-pill">Hafele</div>
+          <div class="brand-pill">Hettich</div>
+          <div class="brand-pill">Ebco</div>
+          <div class="brand-pill">Godrej</div>
+          <div class="brand-pill">Dorset</div>
+          <div class="brand-pill">Europa</div>
+          <div class="brand-pill">Greenply</div>
+          <div class="brand-pill">CenturyPly</div>
+          <div class="brand-pill">Merino</div>
+          <div class="brand-pill">Virgo</div>
+          <div class="brand-pill">Advance Laminates</div>
+        </div>
+        <!-- Duplicate for seamless loop -->
+        <div class="flex items-center gap-10 px-5">
+          <div class="brand-pill">Hafele</div>
+          <div class="brand-pill">Hettich</div>
+          <div class="brand-pill">Ebco</div>
+          <div class="brand-pill">Godrej</div>
+          <div class="brand-pill">Dorset</div>
+          <div class="brand-pill">Europa</div>
+          <div class="brand-pill">Greenply</div>
+          <div class="brand-pill">CenturyPly</div>
+          <div class="brand-pill">Merino</div>
+          <div class="brand-pill">Virgo</div>
+          <div class="brand-pill">Advance Laminates</div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .brand-pill {
+        flex-shrink: 0;
+        padding: 14px 32px;
+        background: rgba(139,94,60,0.07);
+        border: 1.5px solid rgba(139,94,60,0.15);
+        border-radius: 100px;
+        font-family: 'Playfair Display', serif;
+        font-size: 15px;
+        font-weight: 600;
+        color: #8B5E3C;
+        white-space: nowrap;
+        transition: background 0.2s, border-color 0.2s, color 0.2s;
+      }
+      .brand-pill:hover {
+        background: rgba(201,169,110,0.18);
+        border-color: #C9A96E;
+        color: #6B4226;
+      }
+      .dark .brand-pill {
+        color: #C9A96E;
+        background: rgba(201,169,110,0.07);
+        border-color: rgba(201,169,110,0.2);
+      }
+    </style>
+  </section>
+
+  <!-- ═══════════════════════════════ GALLERY ═══════════════════════════════ -->
+  <section id="gallery" class="py-24 bg-cream dark:bg-charcoal relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <p class="text-wood font-600 text-xs tracking-widest uppercase mb-3">Inspiration</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-700 text-charcoal dark:text-cream gold-line gold-line-center">
+          Our Showroom Gallery
+        </h2>
+        <p class="text-charcoal-muted dark:text-cream/60 mt-6 text-sm">A glimpse into our world of beautiful interiors and premium hardware</p>
+      </div>
+
+      <!-- Masonry-style grid using SVG illustrations -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[180px]">
+
+        <!-- Tall card -->
+        <div class="gallery-item relative row-span-2 reveal" style="border-radius:16px;">
+          <div class="w-full h-full bg-gradient-to-br from-charcoal via-wood-dark to-charcoal-soft relative overflow-hidden rounded-2xl">
+            <svg viewBox="0 0 200 360" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#1C1C1E"/><stop offset="100%" style="stop-color:#2C1810"/></linearGradient>
+                <linearGradient id="wg1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#6B4226"/><stop offset="100%" style="stop-color:#A67C52"/></linearGradient>
+              </defs>
+              <rect width="200" height="360" fill="url(#g1)"/>
+              <!-- Kitchen cabinets -->
+              <rect x="10" y="40" width="180" height="80" rx="3" fill="#2C1810" stroke="#8B5E3C" stroke-width="0.8"/>
+              <rect x="16" y="47" width="55" height="66" rx="2" fill="#3D2314" stroke="#C9A96E" stroke-width="0.5"/>
+              <rect x="77" y="47" width="55" height="66" rx="2" fill="#3D2314" stroke="#C9A96E" stroke-width="0.5"/>
+              <rect x="138" y="47" width="46" height="66" rx="2" fill="#3D2314" stroke="#C9A96E" stroke-width="0.5"/>
+              <rect x="38" y="77" width="14" height="3" rx="1.5" fill="#C9A96E"/>
+              <rect x="99" y="77" width="14" height="3" rx="1.5" fill="#C9A96E"/>
+              <rect x="155" y="77" width="14" height="3" rx="1.5" fill="#C9A96E"/>
+              <!-- Countertop -->
+              <rect x="8" y="116" width="184" height="10" rx="3" fill="url(#wg1)" opacity="0.8"/>
+              <!-- Lower cabinets -->
+              <rect x="10" y="126" width="180" height="100" rx="3" fill="#2C1810" stroke="#8B5E3C" stroke-width="0.8"/>
+              <rect x="16" y="132" width="55" height="88" rx="2" fill="#3D2314" stroke="#C9A96E" stroke-width="0.5"/>
+              <rect x="77" y="132" width="55" height="88" rx="2" fill="#3D2314" stroke="#C9A96E" stroke-width="0.5"/>
+              <rect x="138" y="132" width="46" height="88" rx="2" fill="#3D2314" stroke="#C9A96E" stroke-width="0.5"/>
+              <rect x="38" y="174" width="14" height="3" rx="1.5" fill="#C9A96E"/>
+              <rect x="99" y="174" width="14" height="3" rx="1.5" fill="#C9A96E"/>
+              <rect x="155" y="174" width="14" height="3" rx="1.5" fill="#C9A96E"/>
+              <!-- Floor -->
+              <rect x="0" y="290" width="200" height="70" fill="url(#wg1)" opacity="0.25"/>
+              <!-- Label -->
+              <rect x="20" y="310" width="160" height="24" rx="12" fill="rgba(201,169,110,0.15)" stroke="#C9A96E" stroke-width="0.5"/>
+              <text x="100" y="326" text-anchor="middle" font-family="Inter" font-size="9" fill="#C9A96E" font-weight="600">Modular Kitchen</text>
+            </svg>
+            <div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent flex items-end p-4">
+              <span class="text-white text-xs font-600">Modular Kitchen Display</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Regular card -->
+        <div class="gallery-item relative reveal" style="transition-delay:0.1s">
+          <div class="w-full h-full bg-gradient-to-br from-wood-dark to-charcoal relative overflow-hidden rounded-2xl">
+            <svg viewBox="0 0 200 180" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#2C1810"/><stop offset="100%" style="stop-color:#1C1C1E"/></linearGradient></defs>
+              <rect width="200" height="180" fill="url(#g2)"/>
+              <!-- Laminate samples stacked -->
+              <rect x="15" y="20" width="170" height="22" rx="4" fill="#8B5E3C" opacity="0.9"/>
+              <rect x="15" y="47" width="170" height="22" rx="4" fill="#C9A96E" opacity="0.85"/>
+              <rect x="15" y="74" width="170" height="22" rx="4" fill="#6B4226" opacity="0.9"/>
+              <rect x="15" y="101" width="170" height="22" rx="4" fill="#A67C52" opacity="0.8"/>
+              <rect x="15" y="128" width="170" height="22" rx="4" fill="#DFC08A" opacity="0.7"/>
+              <!-- Grain lines -->
+              <line x1="15" y1="25" x2="185" y2="25" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+              <line x1="15" y1="52" x2="185" y2="52" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+              <text x="100" y="164" text-anchor="middle" font-family="Inter" font-size="9" fill="#C9A96E" font-weight="600">Premium Laminates</text>
+            </svg>
+            <div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent flex items-end p-3">
+              <span class="text-white text-xs font-600">Laminates Collection</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tall card 2 -->
+        <div class="gallery-item relative row-span-2 reveal" style="transition-delay:0.15s">
+          <div class="w-full h-full bg-gradient-to-br from-charcoal to-charcoal-soft relative overflow-hidden rounded-2xl">
+            <svg viewBox="0 0 200 360" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="360" fill="#1C1C1E"/>
+              <!-- Wardrobe -->
+              <rect x="15" y="30" width="170" height="290" rx="5" fill="#2C1810" stroke="#8B5E3C" stroke-width="1"/>
+              <line x1="100" y1="30" x2="100" y2="320" stroke="#C9A96E" stroke-width="0.8"/>
+              <rect x="22" y="37" width="72" height="276" rx="3" fill="url(#wg1)" opacity="0.35"/>
+              <rect x="106" y="37" width="73" height="276" rx="3" fill="url(#wg1)" opacity="0.2"/>
+              <!-- Handles -->
+              <rect x="86" y="168" width="4" height="28" rx="2" fill="#C9A96E"/>
+              <rect x="110" y="168" width="4" height="28" rx="2" fill="#C9A96E"/>
+              <!-- Label -->
+              <rect x="30" y="330" width="140" height="22" rx="11" fill="rgba(201,169,110,0.15)" stroke="#C9A96E" stroke-width="0.5"/>
+              <text x="100" y="345" text-anchor="middle" font-family="Inter" font-size="9" fill="#C9A96E" font-weight="600">Sliding Wardrobe</text>
+            </svg>
+            <div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent flex items-end p-4">
+              <span class="text-white text-xs font-600">Sliding Wardrobe System</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Regular card -->
+        <div class="gallery-item relative reveal" style="transition-delay:0.2s">
+          <div class="w-full h-full bg-gradient-to-br from-charcoal-soft to-wood-dark relative overflow-hidden rounded-2xl">
+            <svg viewBox="0 0 200 180" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="180" fill="#2C2C2E"/>
+              <!-- Handles grid -->
+              <rect x="20" y="20" width="48" height="48" rx="8" fill="#3D2314" stroke="#C9A96E" stroke-width="0.8"/>
+              <rect x="36" y="40" width="16" height="6" rx="3" fill="#C9A96E"/>
+              <rect x="76" y="20" width="48" height="48" rx="8" fill="#3D2314" stroke="#8B5E3C" stroke-width="0.8"/>
+              <circle cx="100" cy="44" r="10" fill="#C9A96E" opacity="0.8"/>
+              <rect x="132" y="20" width="48" height="48" rx="8" fill="#3D2314" stroke="#C9A96E" stroke-width="0.8"/>
+              <rect x="148" y="30" width="6" height="28" rx="3" fill="#C9A96E"/>
+              <!-- Second row -->
+              <rect x="20" y="80" width="48" height="48" rx="8" fill="#3D2314" stroke="#C9A96E" stroke-width="0.8"/>
+              <rect x="33" y="98" width="22" height="6" rx="3" fill="#8B5E3C"/>
+              <rect x="76" y="80" width="48" height="48" rx="8" fill="#3D2314" stroke="#8B5E3C" stroke-width="0.8"/>
+              <rect x="89" y="92" width="22" height="20" rx="4" fill="none" stroke="#C9A96E" stroke-width="1.5"/>
+              <rect x="132" y="80" width="48" height="48" rx="8" fill="#3D2314" stroke="#C9A96E" stroke-width="0.8"/>
+              <circle cx="156" cy="104" r="8" fill="none" stroke="#C9A96E" stroke-width="1.5"/>
+              <text x="100" y="154" text-anchor="middle" font-family="Inter" font-size="9" fill="#C9A96E" font-weight="600">Handles & Knobs</text>
+            </svg>
+            <div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent flex items-end p-3">
+              <span class="text-white text-xs font-600">Handles & Knobs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Regular card -->
+        <div class="gallery-item relative reveal" style="transition-delay:0.25s">
+          <div class="w-full h-full bg-gradient-to-br from-wood-dark to-charcoal relative overflow-hidden rounded-2xl">
+            <svg viewBox="0 0 200 180" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="180" fill="#2C1810"/>
+              <!-- Plywood stack cross section -->
+              <rect x="15" y="30" width="170" height="18" rx="2" fill="url(#wg1)" opacity="0.9"/>
+              <rect x="15" y="50" width="170" height="4" rx="1" fill="#1C1C1E" opacity="0.6"/>
+              <rect x="15" y="56" width="170" height="18" rx="2" fill="url(#wg1)" opacity="0.8"/>
+              <rect x="15" y="76" width="170" height="4" rx="1" fill="#1C1C1E" opacity="0.6"/>
+              <rect x="15" y="82" width="170" height="18" rx="2" fill="url(#wg1)" opacity="0.75"/>
+              <rect x="15" y="102" width="170" height="4" rx="1" fill="#1C1C1E" opacity="0.6"/>
+              <rect x="15" y="108" width="170" height="18" rx="2" fill="url(#wg1)" opacity="0.7"/>
+              <text x="100" y="154" text-anchor="middle" font-family="Inter" font-size="9" fill="#DFC08A" font-weight="600">Premium Plywood</text>
+            </svg>
+            <div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent flex items-end p-3">
+              <span class="text-white text-xs font-600">Premium Plywood</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Regular card -->
+        <div class="gallery-item relative reveal" style="transition-delay:0.3s">
+          <div class="w-full h-full bg-gradient-to-br from-charcoal to-charcoal-soft relative overflow-hidden rounded-2xl">
+            <svg viewBox="0 0 200 180" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="180" fill="#1C1C1E"/>
+              <!-- Curtain rod and curtains -->
+              <rect x="10" y="25" width="180" height="6" rx="3" fill="#C9A96E"/>
+              <circle cx="12" cy="28" r="7" fill="#C9A96E"/>
+              <circle cx="188" cy="28" r="7" fill="#C9A96E"/>
+              <!-- Curtain panels -->
+              <path d="M15 31 Q25 80 20 150 L70 150 Q65 80 75 31 Z" fill="#8B5E3C" opacity="0.7"/>
+              <path d="M80 31 Q90 80 85 150 L130 150 Q125 80 135 31 Z" fill="#6B4226" opacity="0.6"/>
+              <path d="M140 31 Q150 80 145 150 L185 150 Q180 80 190 31 Z" fill="#8B5E3C" opacity="0.7"/>
+              <!-- Ring clips -->
+              <circle cx="20" cy="30" r="3" fill="none" stroke="#DFC08A" stroke-width="1"/>
+              <circle cx="50" cy="30" r="3" fill="none" stroke="#DFC08A" stroke-width="1"/>
+              <circle cx="80" cy="30" r="3" fill="none" stroke="#DFC08A" stroke-width="1"/>
+              <circle cx="110" cy="30" r="3" fill="none" stroke="#DFC08A" stroke-width="1"/>
+              <circle cx="140" cy="30" r="3" fill="none" stroke="#DFC08A" stroke-width="1"/>
+              <circle cx="170" cy="30" r="3" fill="none" stroke="#DFC08A" stroke-width="1"/>
+              <text x="100" y="168" text-anchor="middle" font-family="Inter" font-size="9" fill="#C9A96E" font-weight="600">Curtain Fittings</text>
+            </svg>
+            <div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent flex items-end p-3">
+              <span class="text-white text-xs font-600">Curtain Fittings</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wide card -->
+        <div class="gallery-item relative col-span-2 reveal" style="transition-delay:0.35s">
+          <div class="w-full h-full bg-gradient-to-r from-charcoal-soft via-charcoal to-wood-dark relative overflow-hidden rounded-2xl">
+            <svg viewBox="0 0 400 180" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="180" fill="url(#showBg)"/>
+              <defs><linearGradient id="showBg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#2C2C2E"/><stop offset="100%" style="stop-color:#1C1C1E"/></linearGradient></defs>
+              <!-- Showroom floor -->
+              <rect x="0" y="130" width="400" height="50" fill="url(#wg1)" opacity="0.2"/>
+              <!-- Display shelves -->
+              <rect x="20" y="40" width="80" height="90" rx="4" fill="#2C1810" stroke="#8B5E3C" stroke-width="0.8"/>
+              <rect x="25" y="50" width="70" height="35" rx="2" fill="#3D2314"/>
+              <rect x="25" y="90" width="70" height="35" rx="2" fill="#3D2314"/>
+              <!-- Product displays -->
+              <rect x="35" y="57" width="20" height="22" rx="2" fill="#C9A96E" opacity="0.7"/>
+              <rect x="60" y="57" width="20" height="22" rx="2" fill="#8B5E3C" opacity="0.8"/>
+              <rect x="35" y="97" width="20" height="22" rx="2" fill="#A67C52" opacity="0.7"/>
+              <rect x="60" y="97" width="20" height="22" rx="2" fill="#C9A96E" opacity="0.6"/>
+              <!-- Second unit -->
+              <rect x="120" y="40" width="80" height="90" rx="4" fill="#2C1810" stroke="#8B5E3C" stroke-width="0.8"/>
+              <rect x="125" y="50" width="70" height="35" rx="2" fill="#3D2314"/>
+              <rect x="125" y="90" width="70" height="35" rx="2" fill="#3D2314"/>
+              <rect x="135" y="62" width="50" height="14" rx="2" fill="#C9A96E" opacity="0.5"/>
+              <rect x="135" y="100" width="50" height="14" rx="2" fill="#8B5E3C" opacity="0.5"/>
+              <!-- Third unit -->
+              <rect x="220" y="40" width="80" height="90" rx="4" fill="#2C1810" stroke="#8B5E3C" stroke-width="0.8"/>
+              <rect x="225" y="50" width="70" height="75" rx="2" fill="#3D2314"/>
+              <circle cx="260" cy="87" r="22" fill="none" stroke="#C9A96E" stroke-width="1"/>
+              <circle cx="260" cy="87" r="14" fill="#C9A96E" opacity="0.3"/>
+              <!-- Title -->
+              <rect x="310" y="60" width="75" height="50" rx="8" fill="rgba(201,169,110,0.1)" stroke="#C9A96E" stroke-width="0.8"/>
+              <text x="347" y="82" text-anchor="middle" font-family="Playfair Display" font-size="10" fill="#C9A96E" font-weight="700">Samrat</text>
+              <text x="347" y="96" text-anchor="middle" font-family="Inter" font-size="7" fill="#C9A96E" opacity="0.7">SHOWROOM</text>
+              <text x="200" y="162" text-anchor="middle" font-family="Inter" font-size="9" fill="#C9A96E" font-weight="600">Samrat Hardware & Plywood Showroom, Anjanapura</text>
+            </svg>
+            <div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent flex items-end p-4">
+              <span class="text-white text-xs font-600">Our Showroom, Anjanapura Bengaluru</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ REVIEWS ═══════════════════════════════ -->
+  <section id="reviews" class="py-24 bg-white dark:bg-charcoal-soft relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-72 h-72 bg-gold/5 rounded-full blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <p class="text-wood font-600 text-xs tracking-widest uppercase mb-3">Testimonials</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-700 text-charcoal dark:text-cream gold-line gold-line-center">
+          What Our Customers Say
+        </h2>
+      </div>
+
+      <!-- Slider -->
+      <div class="relative overflow-hidden" id="testimonial-container">
+        <div class="testimonial-track" id="testimonial-track">
+
+          <div class="testimonial-slide min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-3">
+            <div class="glass-card dark:bg-charcoal rounded-2xl p-8 h-full border border-wood/10">
+              <div class="stars mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p class="text-charcoal-muted dark:text-cream/70 text-sm leading-relaxed mb-6">"Excellent shop for all kinds of hardware needs. Got Hettich hinges and telescopic channels at great prices. The staff is very knowledgeable and helpful."</p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-wood to-gold flex items-center justify-center text-white font-700 text-sm">R</div>
+                <div>
+                  <p class="font-600 text-sm text-charcoal dark:text-cream">Rajan Kumar</p>
+                  <p class="text-xs text-charcoal-muted dark:text-cream/50">Interior Designer, Bengaluru</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-3">
+            <div class="glass-card dark:bg-charcoal rounded-2xl p-8 h-full border border-wood/10">
+              <div class="stars mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p class="text-charcoal-muted dark:text-cream/70 text-sm leading-relaxed mb-6">"Best hardware shop in Anjanapura! I renovated my full kitchen with modular fittings from here. Quality is top-notch and prices are very reasonable."</p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-wood to-gold flex items-center justify-center text-white font-700 text-sm">P</div>
+                <div>
+                  <p class="font-600 text-sm text-charcoal dark:text-cream">Priya Nair</p>
+                  <p class="text-xs text-charcoal-muted dark:text-cream/50">Homeowner, JP Nagar</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-3">
+            <div class="glass-card dark:bg-charcoal rounded-2xl p-8 h-full border border-wood/10">
+              <div class="stars mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p class="text-charcoal-muted dark:text-cream/70 text-sm leading-relaxed mb-6">"Got CenturyPly and Merino laminates for my home renovation. Samrat Hardware gave the best price in the area. Very satisfied with the quality!"</p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-wood to-gold flex items-center justify-center text-white font-700 text-sm">M</div>
+                <div>
+                  <p class="font-600 text-sm text-charcoal dark:text-cream">Mohammed Farhan</p>
+                  <p class="text-xs text-charcoal-muted dark:text-cream/50">Contractor, Kanakapura Road</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-3">
+            <div class="glass-card dark:bg-charcoal rounded-2xl p-8 h-full border border-wood/10">
+              <div class="stars mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p class="text-charcoal-muted dark:text-cream/70 text-sm leading-relaxed mb-6">"Bought Hafele drawer systems and soft-close hinges. The owner personally helped me choose the right products. Truly a premium showroom experience!"</p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-wood to-gold flex items-center justify-center text-white font-700 text-sm">S</div>
+                <div>
+                  <p class="font-600 text-sm text-charcoal dark:text-cream">Suresh Babu</p>
+                  <p class="text-xs text-charcoal-muted dark:text-cream/50">Carpenter, Uttarahalli</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-3">
+            <div class="glass-card dark:bg-charcoal rounded-2xl p-8 h-full border border-wood/10">
+              <div class="stars mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+              <p class="text-charcoal-muted dark:text-cream/70 text-sm leading-relaxed mb-6">"Wonderful collection of curtain rods, brackets, and accessories. Wide variety, good brands, and the staff explained everything patiently. Highly recommend!"</p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-wood to-gold flex items-center justify-center text-white font-700 text-sm">A</div>
+                <div>
+                  <p class="font-600 text-sm text-charcoal dark:text-cream">Anitha Reddy</p>
+                  <p class="text-xs text-charcoal-muted dark:text-cream/50">Homeowner, Banashankari</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Slider controls -->
+      <div class="flex items-center justify-center gap-4 mt-10">
+        <button id="prev-btn" class="w-11 h-11 rounded-full border-2 border-wood/30 flex items-center justify-center text-wood hover:bg-wood hover:text-white transition-all duration-300">
+          <i class="fa-solid fa-chevron-left text-sm"></i>
+        </button>
+        <div class="flex gap-2" id="dots"></div>
+        <button id="next-btn" class="w-11 h-11 rounded-full border-2 border-wood/30 flex items-center justify-center text-wood hover:bg-wood hover:text-white transition-all duration-300">
+          <i class="fa-solid fa-chevron-right text-sm"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+  <section id="contact" class="py-24 bg-cream dark:bg-charcoal relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-wood/5 rounded-full blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <p class="text-wood font-600 text-xs tracking-widest uppercase mb-3">Get In Touch</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-700 text-charcoal dark:text-cream gold-line gold-line-center">
+          Visit Our Showroom
+        </h2>
+        <p class="text-charcoal-muted dark:text-cream/60 mt-6 text-sm">We'd love to help you find the perfect products for your home</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-10">
+
+        <!-- Left: Info & Map -->
+        <div class="reveal-left space-y-6">
+
+          <!-- Info cards -->
+          <div class="glass-card dark:bg-charcoal-soft rounded-2xl p-6 border border-wood/10">
+            <h3 class="font-display text-lg font-600 text-charcoal dark:text-cream mb-5">Contact Information</h3>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-wood/10 flex items-center justify-center flex-shrink-0">
+                  <i class="fa-solid fa-location-dot text-wood text-sm"></i>
+                </div>
+                <div>
+                  <p class="font-600 text-sm text-charcoal dark:text-cream">Address</p>
+                  <p class="text-charcoal-muted dark:text-cream/60 text-sm mt-0.5">Samrat Hardware & Plywood<br />Anjanapura, Bengaluru, Karnataka</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-wood/10 flex items-center justify-center flex-shrink-0">
+                  <i class="fa-solid fa-phone text-wood text-sm"></i>
+                </div>
+                <div>
+                  <p class="font-600 text-sm text-charcoal dark:text-cream">Phone</p>
+                  <a href="tel:+917829346217" class="text-wood hover:text-gold transition-colors text-sm font-600">+91 7829 346 217</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-wood/10 flex items-center justify-center flex-shrink-0">
+                  <i class="fa-solid fa-clock text-wood text-sm"></i>
+                </div>
+                <div>
+                  <p class="font-600 text-sm text-charcoal dark:text-cream">Working Hours</p>
+                  <p class="text-charcoal-muted dark:text-cream/60 text-sm mt-0.5">Mon – Sat: 9:00 AM – 8:00 PM<br />Sunday: 10:00 AM – 5:00 PM</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- WhatsApp CTA -->
+            <a href="https://wa.me/917829346217?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20products." target="_blank" rel="noopener noreferrer"
+               class="mt-6 flex items-center justify-center gap-3 w-full bg-[#25D366] hover:bg-[#1fbb57] text-white font-600 py-3.5 rounded-xl transition-colors shadow-lg">
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+              Chat on WhatsApp
+            </a>
+          </div>
+
+          <!-- Map embed -->
+          <div class="rounded-2xl overflow-hidden border border-wood/15 shadow-xl" style="height:260px;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.012765!2d77.5648!3d12.8719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6b8ae0a8d93b%3A0x50e0f0a5b37e7c0!2sAnjanapura%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Samrat Hardware & Plywood Location"></iframe>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="reveal-right">
+          <div class="glass-card dark:bg-charcoal-soft rounded-2xl p-8 border border-wood/10">
+            <h3 class="font-display text-lg font-600 text-charcoal dark:text-cream mb-6">Send us a Message</h3>
+            <div class="space-y-4" id="contact-form">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-600 text-charcoal-muted dark:text-cream/60 mb-2">Your Name</label>
+                  <input type="text" placeholder="Rajan Kumar" class="w-full px-4 py-3 rounded-xl border border-wood/20 bg-white/60 dark:bg-charcoal/60 text-charcoal dark:text-cream text-sm focus:outline-none focus:border-wood focus:ring-2 focus:ring-wood/10 transition-all placeholder:text-charcoal-muted/40" />
+                </div>
+                <div>
+                  <label class="block text-xs font-600 text-charcoal-muted dark:text-cream/60 mb-2">Phone Number</label>
+                  <input type="tel" placeholder="+91 XXXXX XXXXX" class="w-full px-4 py-3 rounded-xl border border-wood/20 bg-white/60 dark:bg-charcoal/60 text-charcoal dark:text-cream text-sm focus:outline-none focus:border-wood focus:ring-2 focus:ring-wood/10 transition-all placeholder:text-charcoal-muted/40" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-xs font-600 text-charcoal-muted dark:text-cream/60 mb-2">Email Address</label>
+                <input type="email" placeholder="your@email.com" class="w-full px-4 py-3 rounded-xl border border-wood/20 bg-white/60 dark:bg-charcoal/60 text-charcoal dark:text-cream text-sm focus:outline-none focus:border-wood focus:ring-2 focus:ring-wood/10 transition-all placeholder:text-charcoal-muted/40" />
+              </div>
+              <div>
+                <label class="block text-xs font-600 text-charcoal-muted dark:text-cream/60 mb-2">Product Interest</label>
+                <select class="w-full px-4 py-3 rounded-xl border border-wood/20 bg-white/60 dark:bg-charcoal/60 text-charcoal dark:text-cream text-sm focus:outline-none focus:border-wood focus:ring-2 focus:ring-wood/10 transition-all">
+                  <option>Select a category...</option>
+                  <option>Modular Kitchen Accessories</option>
+                  <option>Sliding Wardrobe Fittings</option>
+                  <option>Curtain Brackets & Accessories</option>
+                  <option>Plywood</option>
+                  <option>Laminates</option>
+                  <option>Handles & Knobs</option>
+                  <option>Hinges</option>
+                  <option>Telescopic Channels</option>
+                  <option>Drawer Systems</option>
+                  <option>Locks</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-600 text-charcoal-muted dark:text-cream/60 mb-2">Message</label>
+                <textarea rows="4" placeholder="Tell us about your requirements..." class="w-full px-4 py-3 rounded-xl border border-wood/20 bg-white/60 dark:bg-charcoal/60 text-charcoal dark:text-cream text-sm focus:outline-none focus:border-wood focus:ring-2 focus:ring-wood/10 transition-all resize-none placeholder:text-charcoal-muted/40"></textarea>
+              </div>
+              <button onclick="handleSubmit()" class="w-full btn-shimmer text-white font-600 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
+              </button>
+              <div id="form-success" class="hidden text-center py-4 text-green-600 dark:text-green-400 font-600 text-sm">
+                <i class="fa-solid fa-circle-check mr-2"></i>Thank you! We'll contact you soon.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="bg-charcoal text-white pt-16 pb-8 relative overflow-hidden">
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+    <div class="absolute inset-0 wood-texture opacity-20"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
+
+        <!-- Brand -->
+        <div class="col-span-2 md:col-span-1">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-wood to-gold flex items-center justify-center">
+              <i class="fa-solid fa-hammer text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-display font-700 text-base leading-tight">Samrat</p>
+              <p class="text-xs text-gold tracking-wider">HARDWARE & PLYWOOD</p>
+            </div>
+          </div>
+          <p class="text-white/50 text-sm leading-relaxed mb-5">Your trusted hardware & plywood showroom in Anjanapura, Bengaluru. Premium products, genuine brands.</p>
+          <div class="flex gap-3">
+            <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold/20 flex items-center justify-center text-white/60 hover:text-gold transition-all">
+              <i class="fa-brands fa-facebook-f text-xs"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold/20 flex items-center justify-center text-white/60 hover:text-gold transition-all">
+              <i class="fa-brands fa-instagram text-xs"></i>
+            </a>
+            <a href="https://wa.me/917829346217" aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-white/8 hover:bg-[#25D366]/30 flex items-center justify-center text-white/60 hover:text-[#25D366] transition-all">
+              <i class="fa-brands fa-whatsapp text-xs"></i>
+            </a>
+            <a href="https://maps.google.com/?q=Anjanapura+Bengaluru" aria-label="Google Maps" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold/20 flex items-center justify-center text-white/60 hover:text-gold transition-all">
+              <i class="fa-solid fa-map-location-dot text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <p class="font-display font-600 text-sm text-gold mb-5">Quick Links</p>
+          <ul class="space-y-3 text-sm text-white/55">
+            <li><a href="#home" class="hover:text-gold transition-colors">Home</a></li>
+            <li><a href="#about" class="hover:text-gold transition-colors">About Us</a></li>
+            <li><a href="#products" class="hover:text-gold transition-colors">Products</a></li>
+            <li><a href="#brands" class="hover:text-gold transition-colors">Brands</a></li>
+            <li><a href="#gallery" class="hover:text-gold transition-colors">Gallery</a></li>
+            <li><a href="#reviews" class="hover:text-gold transition-colors">Reviews</a></li>
+            <li><a href="#contact" class="hover:text-gold transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Product Categories -->
+        <div>
+          <p class="font-display font-600 text-sm text-gold mb-5">Products</p>
+          <ul class="space-y-3 text-sm text-white/55">
+            <li><a href="#products" class="hover:text-gold transition-colors">Modular Kitchen</a></li>
+            <li><a href="#products" class="hover:text-gold transition-colors">Wardrobe Fittings</a></li>
+            <li><a href="#products" class="hover:text-gold transition-colors">Curtain Accessories</a></li>
+            <li><a href="#products" class="hover:text-gold transition-colors">Plywood</a></li>
+            <li><a href="#products" class="hover:text-gold transition-colors">Laminates</a></li>
+            <li><a href="#products" class="hover:text-gold transition-colors">Handles & Knobs</a></li>
+            <li><a href="#products" class="hover:text-gold transition-colors">Hinges & Locks</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <p class="font-display font-600 text-sm text-gold mb-5">Contact Us</p>
+          <ul class="space-y-3 text-sm text-white/55">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot text-wood text-xs mt-1"></i>
+              <span>Anjanapura, Bengaluru, Karnataka</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-wood text-xs"></i>
+              <a href="tel:+917829346217" class="hover:text-gold transition-colors">+91 7829 346 217</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-wood text-xs"></i>
+              <a href="https://wa.me/917829346217" class="hover:text-gold transition-colors">WhatsApp Us</a>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-clock text-wood text-xs mt-1"></i>
+              <span>Mon–Sat: 9 AM – 8 PM</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-white/35 text-xs text-center sm:text-left">© 2025 Samrat Hardware & Plywood, Anjanapura, Bengaluru. All rights reserved.</p>
+        <p class="text-white/25 text-xs">Designed with <span class="text-gold">♥</span> for quality craftsmanship</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp FAB -->
+  <a href="https://wa.me/917829346217?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20products."
+     target="_blank" rel="noopener noreferrer"
+     class="wa-pulse fixed bottom-6 left-6 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-2xl hover:bg-[#1fbb57] transition-colors"
+     aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
+  </a>
+
+  <!-- Back to top -->
+  <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+     class="hidden-btn fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full btn-shimmer text-white flex items-center justify-center shadow-xl"
+     aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up text-sm"></i>
+  </button>
+
+  <script>
+    // ─── Navbar scroll behavior ───
+    const navbar = document.getElementById('navbar');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const s = window.scrollY;
+      if (s > 60) {
+        navbar.style.background = document.documentElement.classList.contains('dark')
+          ? 'rgba(28,28,30,0.95)' : 'rgba(28,28,28,0.92)';
+        navbar.style.backdropFilter = 'blur(20px)';
+        navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.3)';
+        navbar.style.borderBottom = '1px solid rgba(201,169,110,0.1)';
+      } else {
+        navbar.style.background = 'transparent';
+        navbar.style.backdropFilter = 'none';
+        navbar.style.boxShadow = 'none';
+        navbar.style.borderBottom = 'none';
+      }
+      lastScroll = s;
+
+      // Back to top
+      const btn = document.getElementById('back-to-top');
+      if (s > 400) btn.classList.remove('hidden-btn');
+      else btn.classList.add('hidden-btn');
+
+      // Progress bar
+      const total = document.body.scrollHeight - window.innerHeight;
+      document.getElementById('progress').style.width = (s / total * 100) + '%';
+    });
+
+    // ─── Mobile menu ───
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      const m = document.getElementById('mobile-menu');
+      m.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-link').forEach(l => {
+      l.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden'));
+    });
+
+    // ─── Dark mode ───
+    const html = document.documentElement;
+    const darkIcon = document.getElementById('dark-icon');
+    let dark = localStorage.getItem('dark') === 'true';
+    function applyDark() {
+      if (dark) { html.classList.add('dark'); darkIcon.className = 'fa-solid fa-sun text-sm'; }
+      else { html.classList.remove('dark'); darkIcon.className = 'fa-solid fa-moon text-sm'; }
+    }
+    applyDark();
+    document.getElementById('dark-toggle').addEventListener('click', () => {
+      dark = !dark;
+      localStorage.setItem('dark', dark);
+      applyDark();
+    });
+
+    // ─── Scroll reveal ───
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+
+    // ─── Testimonial slider ───
+    const track = document.getElementById('testimonial-track');
+    const slides = track.querySelectorAll('.testimonial-slide');
+    let current = 0;
+    let slidesPerView = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
+    const dotsContainer = document.getElementById('dots');
+    const totalGroups = Math.ceil(slides.length / slidesPerView);
+
+    function buildDots() {
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < totalGroups; i++) {
+        const d = document.createElement('button');
+        d.className = `w-2 h-2 rounded-full transition-all duration-300 ${i === 0 ? 'bg-wood w-6' : 'bg-wood/25'}`;
+        d.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(d);
+      }
+    }
+    function updateDots() {
+      dotsContainer.querySelectorAll('button').forEach((d, i) => {
+        d.className = `w-2 h-2 rounded-full transition-all duration-300 ${i === current ? 'bg-wood' : 'bg-wood/25'}`;
+        if (i === current) d.style.width = '24px'; else d.style.width = '8px';
+      });
+    }
+    function goTo(n) {
+      current = Math.max(0, Math.min(n, totalGroups - 1));
+      const pct = (100 / slidesPerView) * current;
+      track.style.transform = `translateX(-${pct}%)`;
+      updateDots();
+    }
+    document.getElementById('prev-btn').addEventListener('click', () => goTo(current - 1));
+    document.getElementById('next-btn').addEventListener('click', () => goTo(current + 1));
+
+    // Auto-advance
+    let autoSlide = setInterval(() => goTo((current + 1) % totalGroups), 4500);
+    track.addEventListener('mouseenter', () => clearInterval(autoSlide));
+    track.addEventListener('mouseleave', () => { autoSlide = setInterval(() => goTo((current + 1) % totalGroups), 4500); });
+
+    // Responsive slides
+    window.addEventListener('resize', () => {
+      const newSpv = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
+      if (newSpv !== slidesPerView) { slidesPerView = newSpv; buildDots(); goTo(0); }
+    });
+    buildDots();
+    updateDots();
+
+    // ─── Contact form ───
+    function handleSubmit() {
+      const success = document.getElementById('form-success');
+      success.classList.remove('hidden');
+      setTimeout(() => success.classList.add('hidden'), 5000);
+    }
+
+    // ─── Lazy loading images ───
+    if ('loading' in HTMLImageElement.prototype) {
+      document.querySelectorAll('img[loading="lazy"]').forEach(img => { img.src = img.dataset.src; });
+    }
+  </script>
+</body>
+</html>
